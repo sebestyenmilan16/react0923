@@ -9,6 +9,13 @@ export default class LoginForm extends React.Component {
         password: ""
     }
 
+    setEmail = (email) =>{
+        console.log("My InputEmail child sent me a new email: ", email);
+        
+        this.setState({email})
+        
+    }
+
     handleSubmit = (e) => {
         e.preventDefault()
 
@@ -20,7 +27,7 @@ export default class LoginForm extends React.Component {
 
         return <div className="form-area">
             <form onSubmit={this.handleSubmit} noValidate>
-                <InputEmail />
+                <InputEmail onEmailChange={this.setEmail} />
                 <InputPassword />
                 <button className="submit-button" type="submit">
                     Sign in

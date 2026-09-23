@@ -1,6 +1,6 @@
 import React from "react";
-import InputEmail from "./InputEmail";
-import InputPassword from "./InputPassword";
+import InputEmail from "../InputEmail";
+import InputPassword from "../InputPassword";
 
 export default class LoginForm extends React.Component {
     handleSubmit = (e) => {

@@ -2,9 +2,15 @@ import React from "react";
 
 export default class InputEmail extends React.Component {
 
+    state = {
+        email: ""
+    }
 
     handleEmailEdit = (e) => {
-
+        console.log("handleEmailEdit e", e.nativeEvent.data) // utolsó karakter
+        console.log("handleEmailEdit e.target.value", e.target?.value) //teljes e-mail
+        const email = e.target?.value // e.nativeEvent?.data helyett 
+        this.setState({email})
     }
 
     render() {
@@ -16,7 +22,8 @@ export default class InputEmail extends React.Component {
                 id="email"
                 type="email"
                 name="email"
-
+                value={this.state.email}
+                onChange={this.handleEmailEdit}
                 required
 
             />

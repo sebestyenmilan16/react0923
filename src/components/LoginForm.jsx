@@ -3,6 +3,12 @@ import InputEmail from "./InputEmail";
 import InputPassword from "./InputPassword";
 
 export default class LoginForm extends React.Component {
+
+    state = {
+        email: "",
+        password: ""
+    }
+
     handleSubmit = (e) => {
         e.preventDefault()
 
